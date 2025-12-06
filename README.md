@@ -1,12 +1,10 @@
-Here is the updated, complete `README.md` file formatted for GitHub. You can copy and paste this directly into your repository.
-
 -----
 
-# 🗣️ ASL to Text Detection using LSTM
+# ASL to Text Detection using LSTM
 
 A real-time American Sign Language (ASL) detection system that translates physical sign language gestures into text. This project leverages **MediaPipe Holistic** for keypoint extraction and a custom **Long Short-Term Memory (LSTM)** neural network trained on sequence data to classify dynamic gestures.
 
-## 📋 Table of Contents
+## Table of Contents
 
   - [Overview]
   - [Features]
@@ -17,11 +15,11 @@ A real-time American Sign Language (ASL) detection system that translates physic
   - [File Structure]
   - [Future Improvements]
 
-## 📖 Overview
+## Overview
 
 This application captures video from a standard webcam, processes the frames to extract 1,662 landmarks (Face, Pose, Left Hand, Right Hand), and feeds sequences of these keypoints into a recurrent neural network. The model predicts the sign being performed in real-time with a confidence probability.
 
-## ✨ Features
+## Features
 
   * **Real-time Prediction:** Instant translation of gestures to text.
   * **Holistic Tracking:** Tracks face, body pose, and both hands simultaneously.
@@ -37,7 +35,7 @@ This application captures video from a standard webcam, processes the frames to 
       * `no`
       * `yes`
 
-## 🛠️ Tech Stack
+## Tech Stack
 
   * **Language:** Python
   * **Computer Vision:** OpenCV (`cv2`), MediaPipe
@@ -45,7 +43,7 @@ This application captures video from a standard webcam, processes the frames to 
   * **Data Manipulation:** NumPy
   * **Visualization:** Matplotlib
 
-## 🧠 Model Architecture
+## Model Architecture
 
 The core model is a Sequential LSTM network optimized for time-series action detection.
 
@@ -62,7 +60,7 @@ The core model is a Sequential LSTM network optimized for time-series action det
   * **Loss Function:** Categorical Crossentropy
   * **Metric:** Categorical Accuracy
 
-## 📦 Installation
+## Installation
 
 1.  **Clone the repository**
 
@@ -87,7 +85,7 @@ The core model is a Sequential LSTM network optimized for time-series action det
     pip install tensorflow opencv-python mediapipe scikit-learn matplotlib numpy
     ```
 
-## 🚀 Usage
+## Usage
 
 The project is structured within a Jupyter Notebook `ASLtoText_LSTM.ipynb`. You can run the project in three phases:
 
@@ -107,7 +105,7 @@ The project is structured within a Jupyter Notebook `ASLtoText_LSTM.ipynb`. You 
   * A window will pop up showing the webcam feed. The predicted sign and a probability visualization will appear on the screen.
   * Press **`q`** to stop the feed.
 
-## 📂 File Structure
+## File Structure
 
 ```text
 .
@@ -121,7 +119,7 @@ The project is structured within a Jupyter Notebook `ASLtoText_LSTM.ipynb`. You 
 └── README.md               # Project documentation
 ```
 
-## 🔮 Future Improvements
+## Future Improvements
 
   * Expand the dataset to include more complex ASL phrases.
   * Implement a Text-to-Speech (TTS) engine to read the predictions aloud.
